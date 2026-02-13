@@ -6,6 +6,5 @@ RUN gradle build -x test
 
 FROM eclipse-temurin:17-jre
 WORKDIR /app
-COPY --from=build /app/build/libs/*boot.jar app.jar
-EXPOSE 8080
+COPY --from=build /app/build/libs/*SNAPSHOT.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
