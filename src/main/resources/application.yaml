@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: counter
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: 6379
